@@ -1,0 +1,22 @@
+ul {
+	width: 200px;
+	
+}
+
+li {
+	margin-bottom: 5px;
+	color: blue;
+	font-size: 14px Arial;
+	border: 1px solid #0D00FF;
+	list-style-type: none;
+	padding: 3px;
+	line-height: 30px;
+}
+
+a {
+	text-decoration: none;
+}
+
+li:hover {
+	font-weight: bold;
+}

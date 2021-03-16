@@ -1,0 +1,30 @@
+p {
+	font-size: 16px;
+	line-height: 30px;
+	width: 400px;
+	text-align: justify;
+	text-indent: 40px;
+	background-color: #F7EFEF;
+	
+}
+
+h1 {
+	color: blue;
+	text-align: center;
+	font-weight: 400px;
+}
+
+h2 {
+	font-size: 15px;
+	color: blue;
+}
+
+b {
+	color: red;
+	font-width: Bold;
+}
+
+i {
+	color: blue;
+	font-style: Italic;
+}
