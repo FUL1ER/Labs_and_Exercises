@@ -1,0 +1,40 @@
+<html>
+	<BODY LINK="#FFFFFF" TEXT="#000000" VLINK="#999999" ALINK="#00FF00" BGCOLOR="#000000">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<center>
+			
+				<form>
+					<table border=3 cellspacing=2 width=350 bgcolor="#ffebcd">
+						<tr align=center>
+						<th align=right>Формула для розрахунку:</th> 
+						<td><input type=text name=expr1 id="expr1" size=15></td>
+						<td><input type=text name=expr2 id="expr2" size=15></td> 
+						<td rowspan=2>
+							<input type=button id="button" value=" Обчислити " onclick="calcW(this.form)">
+						</td>
+						</tr>
+						<tr align=center><th align=right>Результат:</th> 
+						<td><input type=text name=result id="result" size=15></td>
+						</tr>
+					</table>
+				</form>
+				<br>
+				<form>
+					<table border=3 cellspacing=2 width=350 bgcolor="#ffebcd">
+						<tr align=center>
+						<th align=right>Формула для розрахунку:</th> 
+						<td><input type=text name=expr1 size=15></td>
+						<td><input type=text name=expr2 size=15></td> 
+						<td rowspan=2>
+							<input type=button id="button1" value=" Обчислити " onclick="calcV(this.form)">
+						</td>
+						</tr>
+						<tr align=center><th align=right>Результат:</th> 
+						<td><input type=text name=result id="result1" size=15></td>
+						</tr>
+					</table>
+				</form>
+		</center>
+		<script src="script.js"></script>
+	</body>
+</html>
