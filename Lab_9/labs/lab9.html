@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Lab work 9</title>
+	<link type="text/css" href="../style/lab9.css" rel="stylesheet">
+  </head>
+
+  <body>	
+	<div align="center">
+		<br><button id="show-modal" class="btn">Вести данні про студента</button>
+	</div>	
+
+    <script src="../js/script.js"></script>
+    <script>
+        (function () {
+            var modal = $modal({
+  			title: 'Введіть дані будь ласка!',
+  			content: '\
+  			<form name="form_name" method="" action="">\
+  				Введіть назви групи:<input id="target" name="group_name" type="" >\
+				<br><br>Введіть назву дисципліни:<input name="name_of_discipline" type="" >\
+				<br><br>Введіть ваші оцінки за тиждень<br>(через кому):<input name="number_van" type="" >\
+  				<div align="right">\
+  					<br><br>\
+  					<input type=submit id="cm" name="b_submit" ></input>\
+      				<input type=reset name="b_reset" ></input>\
+      			</div>\
+  			</form>',
+		});
+
+            document.querySelector('#show-modal').addEventListener('click', function () {
+                modal.show();
+            });
+        })();
+
+       	document.forms.form_name.onsubmit = function() {
+       		if(this.target_point.value == "" ||
+       			this.number_train.value == "" ||
+       			this.number_van.value == "" ||
+       			this.number_place.value == "") 
+       		{
+       			alert("Error input data!");
+            modal.close();
+       		}
+       		else {
+            
+       			alert("Привіт, ви ввели такі дані:" +
+  				"\n\nМісце призначення: " + this.target_point.value + 
+  				"\nНомер поїзда: " + this.number_train.value +
+  				"\nНомер вагону: " + this.number_van.value +
+  				"\nНомер місця: " + this.number_place.value +
+  				"\n\nЩасливої дороги!");
+            modal.close();
+       		}
+  			
+  			return false;
+		};
+    </script>
+  </body>
+</html>
