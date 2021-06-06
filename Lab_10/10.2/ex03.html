@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Required meta tags always come first -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>Знижки онлайн</title>
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+	<link rel="stylesheet" href="styles/main.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"> </script>
+	
+	
+</head>
+<body>
+    <div class="container">
+		<div class="row">
+		
+			<div class="col-md-12 text-md-center">
+				<h1 class="display-1">Дзвонілки++ <span class="tag tag-pill tag-danger">Увага, знижки!
+					<br>
+					До 25%</span></h1>
+				<button id="btn1" class="btn btn-success btn-lg">
+					<i class="fa fa-percent" aria-hidden="true"></i>
+					Показати наявні знижки! 
+				</button>
+				
+			</div>
+			<div class="col-md-6 offset-md-3">
+				<ul>
+					<li class="list-group-item">
+						iPhone 8
+						<span class="tag tag-primary tag-pill pull-xs-right">899 $</span>
+					</li>
+					<li class="list-group-item">
+						iPhone 7
+						<span class="tag tag-primary tag-pill pull-xs-right">799 $</span>
+					</li>
+					<li class="list-group-item">
+						Apple iPhone 6
+						<span class="tag tag-primary tag-pill pull-xs-right">199 $</span>
+					</li>
+					<li class="list-group-item">
+						Samsung Galaxy S9
+						<span class="tag tag-primary tag-pill pull-xs-right">650 $</span>
+					</li>
+					<li class="list-group-item">
+						Nokia 3310
+						<span class="tag tag-primary tag-pill pull-xs-right">99 $</span>
+					</li>
+					<li class="list-group-item">
+						HTC Two M3
+						<span class="tag tag-primary tag-pill pull-xs-right">433 $</span>
+					</li>
+					<li class="list-group-item">
+						Lenovo H6000
+						<span class="tag tag-primary tag-pill pull-xs-right">250 $</span>
+					</li>
+					<li class="list-group-item">
+						Microsoft Lumia 
+						<span class="tag tag-primary tag-pill pull-xs-right">195 $</span>
+					</li>
+					<li class="list-group-item">
+						Xiomi Redmi 9t Gold
+						<span class="tag tag-primary tag-pill pull-xs-right">999 $</span>
+					</li>					
+				</ul>
+			</div>
+			<div class="col-md-12 text-md-center">
+				<button id="btn2" class="btn btn-info btn-lg">
+					<i class="fa fa-percent" aria-hidden="true"></i>
+					Повернути початкові ціни!
+				</button>
+			</div>
+		</div>
+	</div>
+	<script>
+		$(function() {
+			$("#btn2").hide();
+		});
+
+		$(function() {
+			$("#btn1").on("click",function(e) {
+				$("li>span.tag").each(function(i,v) {
+					console.log(parseInt($(v).text()));
+					$(v).html(parseInt(parseInt($(v).text()) - (parseInt($(v).text()))/25)+" $")
+					.removeClass("tag-primary")
+					.addClass("tag-danger");
+					});
+				$("#btn1").hide(500);
+				$("#btn2").show(500);
+
+			});
+		});
+		$(function() {
+			$("#btn2").on("click",function(e) {
+				$("li>span.tag").each(function(i,v) {
+					console.log(parseInt($(v).text()));
+					$(v).html(Math.ceil(parseInt($(v).text()) + (parseInt($(v).text()))/24) +" $")
+					.removeClass("tag-danger")
+					.addClass("tag-primary");
+					});
+				$("#btn2").hide(500);
+				$("#btn1").show(500);
+			});
+		});
+	</script>
+</body>
+</html>

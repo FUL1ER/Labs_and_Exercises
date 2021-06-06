@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQvery task</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="js/jquery.js"></script>
+    <script src="http://code.jquery.com/color/jquery.color-2.1.2.min.js"></script> 
+    
+</head>
+<body>
+    <div>
+        <button class="run">Почати фокуси</button>
+        <div class="square">
+            <div class="square-word">КВАДРАТ</div>
+        </div>
+    </div>
+
+    <script>
+        $(".run").click(function(){
+            $(".square-word").animate({opacity: "0"}, 1000);
+            $(".square").animate({borderTopColor: "black"}, 3000)
+            .animate ({left: "+=30%", top: "-=300%"}, 2000)
+            .animate ({top: "-=800", height: "240", width: "240"}, "slow")
+            .animate ({opacity: "0", left: "-=60%", top: "+=600"}, "slow")
+             return false;
+    })
+    </script>
+
+</body>
+</html>
