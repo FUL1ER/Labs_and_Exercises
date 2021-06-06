@@ -1,0 +1,21 @@
+.con {
+	text-decoration: none;
+
+	border: 1px solid rgb(255, 0, 0);
+	border-radius: 25px;
+
+	width: 400px;
+	padding: 0;
+	margin-bottom: 5px;
+	display: block;
+
+	line-height: 3em;
+	text-indent: 0.6em;
+
+	color: #F0F0F0;
+	background: linear-gradient(178.7deg, #47915E 6.73%, #263249 139.97%); 
+}
+
+a {
+    text-decoration: none;
+}
